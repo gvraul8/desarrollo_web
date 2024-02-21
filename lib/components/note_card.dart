@@ -13,7 +13,7 @@ class NoteCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 4,
-      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
       child: ListTile(
         title: Text(
           note.title,
@@ -24,16 +24,16 @@ class NoteCard extends StatelessWidget {
           children: [
             Text(
               note.description,
-              style: Theme.of(context).textTheme.bodyText2,
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
             Text(
               'Última edición: ${DateFormat('dd/MM/yyyy HH:mm').format(note.lastEdited)}',
-              style: TextStyle(color: Colors.grey),
+              style: const TextStyle(color: Colors.grey),
             ),
           ],
         ),
         trailing: IconButton(
-          icon: Icon(Icons.edit),
+          icon: const Icon(Icons.edit),
           onPressed: onEdit,
         ),
         onTap: () {
@@ -50,7 +50,7 @@ class NoteCard extends StatelessWidget {
         return AlertDialog(
           title: Text(
             note.title,
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           content: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,12 +58,12 @@ class NoteCard extends StatelessWidget {
             children: [
               Text(
                 note.description,
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(
                 'Última edición: ${DateFormat('dd/MM/yyyy HH:mm').format(note.lastEdited)}',
-                style: TextStyle(color: Colors.grey),
+                style: const TextStyle(color: Colors.grey),
               ),
             ],
           ),
@@ -72,7 +72,7 @@ class NoteCard extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('Cerrar'),
+              child: const Text('Cerrar'),
             ),
           ],
         );

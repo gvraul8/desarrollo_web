@@ -10,13 +10,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Notas App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.indigo,
         accentColor: Colors.pinkAccent,
         fontFamily: 'Roboto',
-        textTheme: TextTheme(
-          headline6: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          bodyText2: TextStyle(fontSize: 16),
+        textTheme: const TextTheme(
+          titleLarge:  TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          bodyMedium:  TextStyle(fontSize: 16),
         ),
       ),
       home: NoteListPage(),
