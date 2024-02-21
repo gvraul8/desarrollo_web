@@ -7,7 +7,7 @@ class NoteCard extends StatelessWidget {
   final Note note;
   final VoidCallback onEdit;
 
-  NoteCard({required this.note, required this.onEdit});
+  const NoteCard({super.key, required this.note, required this.onEdit});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class NoteCard extends StatelessWidget {
       child: ListTile(
         title: Text(
           note.title,
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
